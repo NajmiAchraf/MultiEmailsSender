@@ -28,7 +28,7 @@ class RecruitmentSenderForMoroccanCompanies:
             print('Login success')
             self.Send()
         except Exception:
-            print('Field to connect')
+            print('Field to connect, check if your are turn on less secure apps on : https://myaccount.google.com/lesssecureapps')
             print('1 minute to reconnect')
             time.sleep(60)
             self.Connect()
