@@ -64,6 +64,7 @@ class RecruitmentSenderForMoroccanCompanies:
 
 
 if __name__ == '__main__':
+    # gmail.com/lesssecure
     pdf = ["PDF_FILE_1.pdf", "PDF_FILE_2.pdf"]
 
     RecruitmentSenderForMoroccanCompanies(csv_file="recruitment-email-without-double-quote.csv",
