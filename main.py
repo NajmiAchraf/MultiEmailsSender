@@ -4,7 +4,7 @@ import pandas as pd
 import time
 
 
-class RecruitmentSenderForMoroccanCompanies:
+class MultiEmailsSender:
     def __init__(self, csv_file, pdf_list_file, email_user, email_pass):
         self.data = pd.read_csv(csv_file)
 
@@ -28,7 +28,7 @@ class RecruitmentSenderForMoroccanCompanies:
             print('Login success')
             self.Send()
         except Exception:
-            print('Field to connect, check if your are turn on less secure apps on : https://myaccount.google.com/lesssecureapps')
+            print('Field to connect')
             print('1 minute to reconnect')
             time.sleep(60)
             self.Connect()
@@ -64,10 +64,9 @@ class RecruitmentSenderForMoroccanCompanies:
 
 
 if __name__ == '__main__':
-    # https://myaccount.google.com/lesssecureapps
     pdf = ["PDF_FILE_1.pdf", "PDF_FILE_2.pdf"]
 
-    RecruitmentSenderForMoroccanCompanies(csv_file="recruitment-email-without-double-quote.csv",
-                                          pdf_list_file=pdf,
-                                          email_user="email@gmail.com",
-                                          email_pass="Password")
+    MultiEmailsSender(csv_file="recruitment-email-without-double-quote.csv",
+                      pdf_list_file=pdf,
+                      email_user="email@gmail.com",
+                      email_pass="Password")
