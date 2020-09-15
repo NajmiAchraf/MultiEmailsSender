@@ -1,1 +1,1 @@
-# Recruitment Sender For Moroccan Companies
+# MultiEmailsSender
